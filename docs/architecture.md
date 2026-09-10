@@ -6,12 +6,12 @@ KalaSetu deliberately separates the core business API from the memory-intensive 
 
 ```mermaid
 flowchart TD
-    App[Mobile App (Expo / React Native)]
-    API[Backend API (FastAPI)]
-    ML[ML Service (FastAPI)]
-    DB[(Neon Postgres + pgvector)]
-    Storage[(Storage: R2 / Cloudinary / Local)]
-    LLM[External LLMs: Gemini / Groq]
+    App["Mobile App (Expo / React Native)"]
+    API["Backend API (FastAPI)"]
+    ML["ML Service (FastAPI)"]
+    DB[("Neon Postgres + pgvector")]
+    Storage[("Storage: R2 / Cloudinary / Local")]
+    LLM["External LLMs: Gemini / Groq"]
 
     App -- "HTTPS + JWT" --> API
     API -- "Async SQL" --> DB
