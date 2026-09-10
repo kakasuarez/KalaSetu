@@ -1,0 +1,45 @@
+# Local dev stack.
+services:
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  api:
+    build: ./apps/api
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    env_file: .env
+    environment:
+      REDIS_URL: redis://redis:6379
+      ML_SERVICE_URL: http://ml:8000
+      WATCHFILES_FORCE_POLLING: "true"
+    ports: ["8000:8000"]
+    volumes:
+      - ./apps/api:/code
+      - /code/.venv
+      - ./ml/artifacts:/code/artifacts:ro
+      - ./ml/data:/code/data:ro
+      - ./assets:/code/assets:ro
+    depends_on:
+      redis:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  ml:
+    build: ./apps/ml
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+    env_file: .env
+    environment:
+      WATCHFILES_FORCE_POLLING: "true"
+    ports: ["8001:8000"]
+    volumes:
+      - ./apps/ml:/app
+    command: uvicorn app:app --host 0.0.0.0 --port 8000 --reload

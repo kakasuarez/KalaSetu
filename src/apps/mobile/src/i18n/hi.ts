@@ -1,0 +1,107 @@
+import type en from './en';
+
+/**
+ * Hindi is the default language -- the primary user is a Hindi-belt artisan and
+ * users.preferred_lang defaults to 'hi' in the schema.
+ *
+ * Typed as `typeof en`, so a key added to en.ts without a translation here is a
+ * compile error rather than a blank label on her screen.
+ */
+const hi: typeof en = {
+  appName: 'कलासेतु',
+  common: {
+    retry: 'फिर कोशिश करें',
+    loading: 'लोड हो रहा है…',
+    error: 'कुछ गड़बड़ हुई',
+    next: 'आगे',
+    back: 'पीछे',
+    save: 'सहेजें',
+    cancel: 'रहने दें',
+    delete: 'हटाएँ',
+    done: 'हो गया',
+  },
+  health: {
+    title: 'कनेक्शन',
+    subtitle: 'कलासेतु सेवा जाँची जा रही है',
+    connected: 'जुड़ गया',
+    degraded: 'आंशिक रूप से उपलब्ध',
+    offline: 'सेवा से संपर्क नहीं हुआ',
+    server: 'सर्वर',
+    database: 'डेटाबेस',
+    queue: 'क़तार',
+    ai: 'एआई सेवा',
+    ok: 'ठीक है',
+    fail: 'उपलब्ध नहीं',
+    checkedAt: 'जाँचा गया',
+    hint: 'देखें कि EXPO_PUBLIC_API_URL आपके कंप्यूटर पर सेट है और फ़ोन उसी वाई-फ़ाई पर है।',
+  },
+  onboard: {
+    welcome: 'नमस्ते',
+    enterPhone: 'आपका मोबाइल नंबर',
+    sendOtp: 'कोड भेजें',
+    enterOtp: 'कोड डालें',
+    otpSentTo: 'कोड भेजा गया',
+    verify: 'कोड जाँचें',
+    createPin: '4 अंकों का पिन चुनें',
+    createPinHelp: 'अगली बार ऐप खोलने के लिए यही इस्तेमाल होगा।',
+    confirmPin: 'पिन दोबारा डालें',
+    pinMismatch: 'दोनों पिन अलग हैं। फिर कोशिश करें।',
+    enterPin: 'अपना पिन डालें',
+    useOtpInstead: 'पिन भूल गईं? कोड से आएँ',
+    changeNumber: 'दूसरा नंबर इस्तेमाल करें',
+    devOtpNotice: 'डेव मोड — आपका कोड है',
+  },
+  home: {
+    title: 'मेरे उत्पाद',
+    empty: 'अभी कोई उत्पाद नहीं',
+    emptyHelp: 'अपना पहला उत्पाद फ़ोटो करने के लिए नीचे बटन दबाएँ।',
+    addProduct: 'उत्पाद जोड़ें',
+    signOut: 'साइन आउट',
+    draft: 'ड्राफ़्ट',
+    ready: 'तैयार',
+    published: 'प्रकाशित',
+    paused: 'रुका हुआ',
+    sold_out: 'बिक गया',
+    noPrice: 'दाम नहीं डाला',
+    untitled: 'बिना नाम का उत्पाद',
+  },
+  capture: {
+    title: 'अपना उत्पाद फ़ोटो करें',
+    permissionTitle: 'कैमरे की अनुमति चाहिए',
+    permissionHelp: 'उत्पाद की फ़ोटो लेने के लिए कलासेतु को कैमरा चाहिए।',
+    grant: 'कैमरा चालू करें',
+    shutter: 'फ़ोटो लें',
+    retake: 'दोबारा लें',
+    usePhoto: 'यही फ़ोटो रखें',
+    uploading: 'आपकी फ़ोटो भेजी जा रही है…',
+    starting: 'कैमरा चालू हो रहा है…',
+    notReady: 'कैमरा अभी तैयार नहीं है। एक बार फिर लें।',
+    cameraBlocked: 'ब्राउज़र कैमरा रोक रहा है। इस साइट को कैमरे की अनुमति दें, फिर कोशिश करें।',
+    cameraMissing: 'इस डिवाइस पर कैमरा नहीं मिला।',
+    cameraBusy: 'कोई दूसरा ऐप कैमरा चला रहा है। उसे बंद करके फिर कोशिश करें।',
+    tryAgain: 'फिर कोशिश करें',
+  },
+  review: {
+    title: 'उत्पाद की जानकारी',
+    productName: 'उत्पाद का नाम',
+    productNameHelp: 'इस उत्पाद को क्या कहते हैं?',
+    price: 'दाम रुपयों में',
+    priceHelp: 'आप इसे कितने में बेचना चाहती हैं?',
+    stock: 'आपके पास कितने हैं?',
+    saveListing: 'उत्पाद सहेजें',
+    saved: 'उत्पाद सहेज लिया',
+    missingTitle: 'कृपया उत्पाद का नाम डालें',
+  },
+  errors: {
+    network: 'सर्वर से संपर्क नहीं हुआ। इंटरनेट जाँचें।',
+    invalidOtp: 'यह कोड ग़लत है या इसकी समय-सीमा ख़त्म हो गई।',
+    invalidPin: 'नंबर या पिन ग़लत है।',
+    lockedOut: 'बहुत बार ग़लत पिन। थोड़ी देर बाद कोशिश करें।',
+    fileTooLarge: 'यह फ़ोटो बहुत बड़ी है।',
+    invalidPhone: '10 अंकों का मोबाइल नंबर डालें।',
+    invalidInput: 'कुछ जानकारी ठीक नहीं है। दोबारा जाँचें।',
+    uploadFailed: 'फ़ोटो सहेजी नहीं जा सकी। फिर कोशिश करें।',
+  },
+};
+
+export default hi;

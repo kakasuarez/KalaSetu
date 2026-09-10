@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+rembg
+onnxruntime
+opencv-python-headless
+Pillow
+pydantic
+faster-whisper==1.1.*

@@ -1,0 +1,178 @@
+{
+  "_note": "Festival calendar driving the demand signal (PRD phase 10.1). DATES FOR LUNAR FESTIVALS ARE APPROXIMATE and drift year to year -- Diwali, Holi, Raksha Bandhan and the rest are set by the Hindu lunisolar calendar, not a fixed Gregorian date. Every entry with \"approximate\": true must be checked against a panchang before this ships to a real artisan; a nudge that says 'Diwali is in 40 days' when it is in 54 makes her start late. Fixed-date entries (Christmas, Republic Day, New Year) are safe.",
+  "_fields": {
+    "uplift": "Fractional demand lift over baseline, used only to phrase the message. A rough sector estimate, not measured from our own data.",
+    "lead_days": "How long BEFORE the festival she must start making to have stock ready. This is what turns a date into an action.",
+    "boosts_crafts": "craft_class ids from app/data/crafts.py. Keep in sync -- an id that does not exist there silently never matches."
+  },
+  "festivals": {
+    "Navratri": {
+      "date": "2026-10-11",
+      "approximate": true,
+      "uplift": 0.3,
+      "lead_days": 25,
+      "boosts_crafts": ["saree_textile", "jewellery", "embroidery", "pottery"],
+      "gift_items": ["festive sarees", "oxidised jewellery", "garba accessories"]
+    },
+    "Dussehra": {
+      "date": "2026-10-20",
+      "approximate": true,
+      "uplift": 0.25,
+      "lead_days": 21,
+      "boosts_crafts": ["wooden_toys", "painting", "pottery", "metalware"],
+      "gift_items": ["Kolu dolls", "folk art panels", "clay figurines"]
+    },
+    "Karva Chauth": {
+      "date": "2026-10-29",
+      "approximate": true,
+      "uplift": 0.35,
+      "lead_days": 18,
+      "boosts_crafts": ["jewellery", "metalware", "saree_textile"],
+      "gift_items": ["brass thali sets", "bridal jewellery", "red sarees"]
+    },
+    "Dhanteras": {
+      "date": "2026-11-06",
+      "approximate": true,
+      "uplift": 0.5,
+      "lead_days": 21,
+      "boosts_crafts": ["metalware", "jewellery", "pottery"],
+      "gift_items": ["brass utensils", "silver coins", "diya sets"]
+    },
+    "Diwali": {
+      "date": "2026-11-08",
+      "approximate": true,
+      "uplift": 0.6,
+      "lead_days": 30,
+      "boosts_crafts": ["pottery", "metalware", "painting", "blue_pottery", "basketry"],
+      "gift_items": ["diyas", "torans", "brass lamps", "gift hampers"]
+    },
+    "Bhai Dooj": {
+      "date": "2026-11-11",
+      "approximate": true,
+      "uplift": 0.2,
+      "lead_days": 15,
+      "boosts_crafts": ["jewellery", "metalware", "wooden_toys"],
+      "gift_items": ["gift boxes", "rakhi thalis", "small keepsakes"]
+    },
+    "Chhath Puja": {
+      "date": "2026-11-15",
+      "approximate": true,
+      "uplift": 0.3,
+      "lead_days": 20,
+      "boosts_crafts": ["basketry", "pottery"],
+      "gift_items": ["bamboo soop", "daura baskets", "clay pots"]
+    },
+    "Wedding Season": {
+      "date": "2026-11-25",
+      "approximate": true,
+      "uplift": 0.55,
+      "lead_days": 40,
+      "boosts_crafts": ["saree_textile", "jewellery", "embroidery", "metalware", "block_print"],
+      "gift_items": ["bridal sarees", "trousseau sets", "return gifts"]
+    },
+    "Christmas": {
+      "date": "2026-12-25",
+      "approximate": false,
+      "uplift": 0.25,
+      "lead_days": 30,
+      "boosts_crafts": ["basketry", "wooden_toys", "embroidery", "painting"],
+      "gift_items": ["cane ornaments", "wooden decor", "embroidered stockings"]
+    },
+    "New Year": {
+      "date": "2027-01-01",
+      "approximate": false,
+      "uplift": 0.2,
+      "lead_days": 25,
+      "boosts_crafts": ["painting", "wooden_toys", "leather"],
+      "gift_items": ["desk calendars", "diaries", "corporate gifts"]
+    },
+    "Makar Sankranti / Pongal": {
+      "date": "2027-01-14",
+      "approximate": false,
+      "uplift": 0.25,
+      "lead_days": 21,
+      "boosts_crafts": ["pottery", "basketry", "saree_textile"],
+      "gift_items": ["clay pongal pots", "winnowing baskets", "cotton sarees"]
+    },
+    "Republic Day": {
+      "date": "2027-01-26",
+      "approximate": false,
+      "uplift": 0.15,
+      "lead_days": 20,
+      "boosts_crafts": ["painting", "block_print", "leather"],
+      "gift_items": ["institutional gifts", "handloom stoles"]
+    },
+    "Vasant Panchami": {
+      "date": "2027-02-11",
+      "approximate": true,
+      "uplift": 0.2,
+      "lead_days": 18,
+      "boosts_crafts": ["saree_textile", "painting", "block_print"],
+      "gift_items": ["yellow textiles", "Saraswati art"]
+    },
+    "Holi": {
+      "date": "2027-03-22",
+      "approximate": true,
+      "uplift": 0.3,
+      "lead_days": 25,
+      "boosts_crafts": ["block_print", "saree_textile", "pottery"],
+      "gift_items": ["white kurtas", "pichkari pots", "colour-safe textiles"]
+    },
+    "Gudi Padwa / Ugadi": {
+      "date": "2027-04-07",
+      "approximate": true,
+      "uplift": 0.2,
+      "lead_days": 20,
+      "boosts_crafts": ["metalware", "saree_textile", "pottery"],
+      "gift_items": ["brass kalash", "new-year textiles"]
+    },
+    "Baisakhi": {
+      "date": "2027-04-14",
+      "approximate": false,
+      "uplift": 0.2,
+      "lead_days": 18,
+      "boosts_crafts": ["embroidery", "saree_textile", "basketry"],
+      "gift_items": ["phulkari dupattas", "harvest baskets"]
+    },
+    "Akshaya Tritiya": {
+      "date": "2027-05-09",
+      "approximate": true,
+      "uplift": 0.4,
+      "lead_days": 25,
+      "boosts_crafts": ["jewellery", "metalware"],
+      "gift_items": ["gold-tone jewellery", "brass idols"]
+    },
+    "Raksha Bandhan": {
+      "date": "2027-08-17",
+      "approximate": true,
+      "uplift": 0.45,
+      "lead_days": 30,
+      "boosts_crafts": ["jewellery", "embroidery", "metalware"],
+      "gift_items": ["thread rakhis", "gift boxes", "sweets thalis"]
+    },
+    "Janmashtami": {
+      "date": "2027-08-25",
+      "approximate": true,
+      "uplift": 0.25,
+      "lead_days": 20,
+      "boosts_crafts": ["wooden_toys", "painting", "jewellery", "saree_textile"],
+      "gift_items": ["jhula cradles", "Krishna dresses", "folk paintings"]
+    },
+    "Onam": {
+      "date": "2027-08-27",
+      "approximate": true,
+      "uplift": 0.3,
+      "lead_days": 25,
+      "boosts_crafts": ["saree_textile", "basketry", "metalware"],
+      "gift_items": ["kasavu sarees", "uruli vessels", "palm baskets"]
+    },
+    "Ganesh Chaturthi": {
+      "date": "2027-09-04",
+      "approximate": true,
+      "uplift": 0.4,
+      "lead_days": 30,
+      "boosts_crafts": ["pottery", "painting", "metalware", "blue_pottery"],
+      "gift_items": ["clay Ganesh idols", "decorated thalis", "modak moulds"]
+    }
+  }
+}

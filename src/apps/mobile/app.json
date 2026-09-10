@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "KalaSetu",
+    "slug": "kalasetu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FAF6EE"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "org.kalasetu.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "KalaSetu uses the camera to photograph your products for your listings.",
+        "NSMicrophoneUsageDescription": "KalaSetu records your voice notes so it can write your product descriptions.",
+        "NSPhotoLibraryUsageDescription": "KalaSetu lets you choose existing photos of your products."
+      }
+    },
+    "android": {
+      "package": "org.kalasetu.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FAF6EE"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-audio",
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "17b09672-90e7-4959-8e0e-c64fcdd6eed2"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "_note": "Urban and international product-demand trends, driving the motif-mockup nudge (Features.docx: 'Analyzes trending urban and international product demands (e.g., minimalist decor, lifestyle accessories) and generates realistic visual mockups... increase their product value from Rs 250 to Rs 1,200+').",
+  "_honesty": "These are EDITORIAL trends, hand-written from what sells in urban Indian and export handicraft channels. They are NOT computed from live search or marketplace data -- no such feed is wired up, and pretending otherwise in a demo would be a lie the judges could ask about. Refreshing this file is a manual, quarterly job. If a real trends API is added later, keep this file as the offline fallback.",
+  "_fields": {
+    "base_price": "Typical urban retail price of the finished modern product, in rupees. Used for the value story; sourced from listed prices on Indian D2C sites, not from our own sales.",
+    "template": "Must match a template name in assets/mockup_templates/corners.json.",
+    "suits_crafts": "craft_class ids from app/data/crafts.py."
+  },
+  "trends": [
+    {
+      "id": "minimalist_decor",
+      "label": "Minimalist home decor",
+      "demand_note": "Urban buyers want plain, neutral rooms with one handmade accent piece.",
+      "audience": "Metro apartments, 25-40",
+      "products": [
+        { "template": "cushion", "label": "Cushion cover", "base_price": 899 },
+        { "template": "table_runner", "label": "Table runner", "base_price": 1150 }
+      ],
+      "suits_crafts": ["block_print", "embroidery", "saree_textile", "painting"]
+    },
+    {
+      "id": "everyday_carry",
+      "label": "Everyday carry & lifestyle accessories",
+      "demand_note": "Canvas totes and sleeves with a real handmade print sell year-round, not just at festivals.",
+      "audience": "Students and office buyers in metros",
+      "products": [
+        { "template": "tote", "label": "Canvas tote bag", "base_price": 1200 },
+        { "template": "laptop_sleeve", "label": "Laptop sleeve", "base_price": 1450 }
+      ],
+      "suits_crafts": ["block_print", "embroidery", "painting", "leather", "saree_textile"]
+    },
+    {
+      "id": "desk_and_gifting",
+      "label": "Corporate gifting & desk objects",
+      "demand_note": "Companies buy handmade in bulk for Diwali and onboarding kits -- the highest per-order value an artisan can reach.",
+      "audience": "Corporate bulk buyers",
+      "products": [
+        { "template": "mug", "label": "Ceramic mug", "base_price": 649 },
+        { "template": "notebook", "label": "Hardbound notebook", "base_price": 550 }
+      ],
+      "suits_crafts": ["painting", "blue_pottery", "pottery", "block_print", "leather"]
+    },
+    {
+      "id": "export_folk_art",
+      "label": "Folk art for export",
+      "demand_note": "European and US buyers pay a premium for documented folk art with a GI tag and an artist story.",
+      "audience": "Export and museum-shop buyers",
+      "products": [
+        { "template": "wall_art", "label": "Framed wall panel", "base_price": 2400 }
+      ],
+      "suits_crafts": ["painting", "embroidery", "stone_carving", "metalware"]
+    }
+  ]
+}
