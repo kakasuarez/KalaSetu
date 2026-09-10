@@ -21,6 +21,10 @@ This repository contains the codebase and submission details for the KalaSetu pr
 - **Chitranshi Sehrawat** — UI/UX Designer & Product Manager (2023UCB6064)
 - **Upparapally Vasista** — Data Engineer & Integrations Lead (2023UEE4566)
 
+<div align="center">
+  <img src="assets/screenshots/02-dashboard.jpeg" alt="KalaSetu Dashboard" width="300"/>
+</div>
+
 ## 2. Problem Statement
 
 Marginalized artisans struggle to list their stock on modern e-commerce platforms like ONDC due to language barriers, lack of digital literacy, and the prohibitive cost of professional cataloging and 3D modeling.
@@ -179,6 +183,10 @@ npm start
 ```
 
 _Scan the QR code in the Expo Go app._
+
+**Pre-compiled Demo APK:**
+A pre-compiled Android APK is available for direct installation and testing on physical Android devices.
+- **APK Download:** [Download from Google Drive](https://drive.google.com/drive/folders/1UaDwAhZKv8kVGn1z7W9G1vS0l2GPFAMc?usp=sharing)
 
 ## 13. Future Scope
 
